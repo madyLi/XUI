@@ -17,7 +17,7 @@
 * 组件丰富，提供了绝大多数我们在开发者常用的功能组件。
 * 使用简单，为方便快速开发，提高开发效率，对api进行了优化，提供一键式接入。
 * 样式统一，框架提供了一系列统一的样式，使UI整体看上去美观和谐。
-* 兼容性高，框架还提供了3种不同尺寸设备的样式（4.5寸、7寸和10寸），让UI兼容性更强。
+* 兼容性高，框架还提供了3种不同尺寸设备的样式（4.5英寸、7英寸和10英寸），并且最低兼容到Android 17, 让UI兼容性更强。
 * 扩展性强，各组件提供了丰富的属性和样式API，可以通过设置不同的样式属性，构建不同风格的UI。
 
 ----
@@ -41,11 +41,11 @@ allprojects {
 ```
 dependencies {
   ...
-  implementation 'com.github.xuexiangjys:XUI:1.0.0'
+  implementation 'com.github.xuexiangjys:XUI:1.0.3'
 
-  implementation 'com.android.support:appcompat-v7:27.1.1'
-  implementation 'com.android.support:recyclerview-v7:27.1.1'
-  implementation 'com.android.support:design:27.1.1'
+  implementation 'com.android.support:appcompat-v7:28.0.0'
+  implementation 'com.android.support:recyclerview-v7:28.0.0'
+  implementation 'com.android.support:design:28.0.0'
   implementation 'com.github.bumptech.glide:glide:4.8.0'
 }
 ```
@@ -138,7 +138,7 @@ protected void onCreate(Bundle savedInstanceState) {
 [![](https://img.shields.io/badge/点击一键加入QQ交流群-602082750-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=9922861ef85c19f1575aecea0e8680f60d9386080a97ed310c971ae074998887)
 
 
-[xuisvg]: https://img.shields.io/badge/XUI-v1.0.0-brightgreen.svg
+[xuisvg]: https://img.shields.io/badge/XUI-v1.0.3-brightgreen.svg
 [xui]: https://github.com/xuexiangjys/XUI
 [apisvg]: https://img.shields.io/badge/API-17+-brightgreen.svg
 [api]: https://android-arsenal.com/api?level=17

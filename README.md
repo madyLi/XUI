@@ -9,6 +9,8 @@
 
 > 涵盖绝大部分的UI组件：TextView、Button、EditText、ImageView、Spinner、Picker、Dialog、PopupWindow、ProgressBar、LoadingView、StateLayout、FlowLayout、Switch、Actionbar、TabBar、Banner、GuideView、BadgeView、MarqueeView、WebView、SearchView等一系列的组件和丰富多彩的样式主题。
 
+在提issue前，请先阅读[【提问的智慧】](http://www.binarywang.com/article/smart-questions)，并严格按照[issue模板](https://github.com/xuexiangjys/XUI/issues/new/choose)进行填写，节约大家的时间。
+
 ## 关于我
 
 [![github](https://img.shields.io/badge/GitHub-xuexiangjys-blue.svg)](https://github.com/xuexiangjys)   [![csdn](https://img.shields.io/badge/CSDN-xuexiangjys-green.svg)](http://blog.csdn.net/xuexiangjys)
@@ -21,7 +23,7 @@
 * 组件丰富，提供了绝大多数我们在开发者常用的功能组件。
 * 使用简单，为方便快速开发，提高开发效率，对api进行了优化，提供一键式接入。
 * 样式统一，框架提供了一系列统一的样式，使UI整体看上去美观和谐。
-* 兼容性高，框架还提供了3种不同尺寸设备的样式（4.5英寸、7英寸和10英寸），让UI兼容性更强。
+* 兼容性高，框架还提供了3种不同尺寸设备的样式（4.5英寸、7英寸和10英寸），并且最低兼容到Android 17, 让UI兼容性更强。
 * 扩展性强，各组件提供了丰富的属性和样式API，可以通过设置不同的样式属性，构建不同风格的UI。
 
 ----
@@ -45,11 +47,11 @@ allprojects {
 ```
 dependencies {
   ...
-  implementation 'com.github.xuexiangjys:XUI:1.0.0'
+  implementation 'com.github.xuexiangjys:XUI:1.0.3'
 
-  implementation 'com.android.support:appcompat-v7:27.1.1'
-  implementation 'com.android.support:recyclerview-v7:27.1.1'
-  implementation 'com.android.support:design:27.1.1'
+  implementation 'com.android.support:appcompat-v7:28.0.0'
+  implementation 'com.android.support:recyclerview-v7:28.0.0'
+  implementation 'com.android.support:design:28.0.0'
   implementation 'com.github.bumptech.glide:glide:4.8.0'
 }
 ```
@@ -64,25 +66,9 @@ XUI.debug(true);  //开启UI框架调试日志
 
 ```
 
-2.调整字体库（对字体无要求的可省略）
+2.调整应用的基础主题
 
-（1）设置你需要修改的字体库路径（assets下）
-```
-//设置默认字体为华文行楷，这里写你的字体库
-XUI.getInstance().initFontStyle("fonts/hwxk.ttf");
-```
-
-（2）在项目的基础Activity中加入如下代码注入字体.
-
-```
-@Override
-protected void attachBaseContext(Context newBase) {
-    //注入字体
-    super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-}
-```
-
-### 调整应用的基础主题
+> 必须设置应用的基础主题，否则组件将无法正常使用！
 
 基础主题类型：
 
@@ -111,6 +97,25 @@ protected void onCreate(Bundle savedInstanceState) {
     ...
 }
 ```
+
+3.调整字体库（对字体无要求的可省略）
+
+（1）设置你需要修改的字体库路径（assets下）
+```
+//设置默认字体为华文行楷，这里写你的字体库
+XUI.getInstance().initFontStyle("fonts/hwxk.ttf");
+```
+
+（2）在项目的基础Activity中加入如下代码注入字体.
+
+```
+@Override
+protected void attachBaseContext(Context newBase) {
+    //注入字体
+    super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+}
+```
+
 ----
 
 ## 演示（请star支持）
@@ -156,13 +161,17 @@ protected void onCreate(Bundle savedInstanceState) {
 * [FlycoBanner_Master](https://github.com/H07000223/FlycoBanner_Master)
 * [MaterialProgressBar](https://github.com/DreaminginCodeZH/MaterialProgressBar)
 
+## 如果觉得项目还不错，可以考虑打赏一波
+
+![](./art/alipay.jpeg) &emsp; ![](./art/weixinpay.jpeg)
+
 ## 联系方式
 
 [![](https://img.shields.io/badge/点击一键加入QQ交流群-602082750-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=9922861ef85c19f1575aecea0e8680f60d9386080a97ed310c971ae074998887)
 
 ![](https://github.com/xuexiangjys/XPage/blob/master/img/qq_group.jpg)
 
-[xuisvg]: https://img.shields.io/badge/XUI-v1.0.0-brightgreen.svg
+[xuisvg]: https://img.shields.io/badge/XUI-v1.0.3-brightgreen.svg
 [xui]: https://github.com/xuexiangjys/XUI
 [apisvg]: https://img.shields.io/badge/API-17+-brightgreen.svg
 [api]: https://android-arsenal.com/api?level=17
